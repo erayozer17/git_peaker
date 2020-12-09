@@ -1,0 +1,15 @@
+query {
+    repository(owner: "%s", name: "%s") {
+      object(expression: "master") {
+        ... on Commit {
+          history {
+            nodes {
+              committedDate
+              additions
+              deletions
+            }
+          }
+        }
+      }
+    }
+  }

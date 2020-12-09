@@ -1,0 +1,18 @@
+{
+search(query: "is:public %s", type: REPOSITORY, first: 100%s) {
+    edges {
+      node {
+        ... on Repository {
+          name
+          owner{
+            login
+          }
+        }
+      }
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+  }
+}

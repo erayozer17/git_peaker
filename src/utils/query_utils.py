@@ -9,3 +9,7 @@ def get_query(name, *args):
     with open(abs_file_path, "r") as f:
         q = f.read()
     return q % args
+
+
+def build_after_param(next_cursor):
+    return f', after: "{next_cursor}"'

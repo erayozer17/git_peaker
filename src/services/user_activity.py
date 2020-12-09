@@ -8,4 +8,6 @@ def make_user_contribution_call(owner):
     now = get_now_isoformat(True)
     query = get_query("user_contribution", owner, time_yesterday, now)
     response = make_github_call(query)
-    return response.json()["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+    if "errors" in response:
+        return False
+    return response["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
