@@ -19,7 +19,3 @@ def get_time_days_before(days):
 
 def sanitize_isoformat_time(time):
     return time.split(".")[0] + "Z"
-
-
-def is_time_later_than_a_week(time):
-    return time < get_time_days_before(7)

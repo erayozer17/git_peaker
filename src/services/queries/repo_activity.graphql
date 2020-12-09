@@ -2,7 +2,7 @@ query {
     repository(owner: "%s", name: "%s") {
       object(expression: "master") {
         ... on Commit {
-          history {
+          history(since: "%s") {
             nodes {
               committedDate
               additions
@@ -13,3 +13,6 @@ query {
       }
     }
   }
+
+
+

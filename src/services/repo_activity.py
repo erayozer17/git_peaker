@@ -1,5 +1,5 @@
 from src.utils.query_utils import get_query, build_after_param
-from src.utils.time_utils import is_time_later_than_a_week
+from src.utils.time_utils import get_time_days_before
 from .helpers import make_github_call
 
 
@@ -32,7 +32,8 @@ def get_repo_commits(repo):
     owner = get_repo_owner(repo)
     if not owner:
         return False
-    query = get_query("repo_activity", owner, repo)
+    last_week = get_time_days_before(7)
+    query = get_query("repo_activity", owner, repo, last_week)
     commits = make_github_call(query)
     return commits["data"]["repository"]["object"]["history"]["nodes"]
 
@@ -43,8 +44,6 @@ def get_total_changes_on_commits(repo):
     if not commits:
         return False
     for commit in commits:
-        if is_time_later_than_a_week(commit["committedDate"]):
-            break
         total += commit["additions"]
         total -= commit["deletions"]
     return total
