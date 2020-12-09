@@ -1,0 +1,9 @@
+query {
+    user(login: "%s") {
+        contributionsCollection(from: "%s", to: "%s") {
+            contributionCalendar {
+                totalContributions
+            }
+        }
+    }
+}
