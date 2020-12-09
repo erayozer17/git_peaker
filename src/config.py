@@ -1,15 +1,22 @@
 class BaseConfig:
-    """Base configuration"""
+    """Base configuration."""
+
     TESTING = False
 
+
 class DevelopmentConfig(BaseConfig):
-    """Development configuration"""
+    """Development configuration."""
+
     pass
 
+
 class TestingConfig(BaseConfig):
-    """Testing configuration"""
+    """Testing configuration."""
+
     TESTING = True
-    
+
+
 class ProductionConfig(BaseConfig):
-    """Production configuration"""
+    """Production configuration."""
+
     pass
