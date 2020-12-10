@@ -24,7 +24,7 @@ def ping_pong():
 @app.route("/active/<user>", methods=["GET"])
 def is_user_active(user):
     contribution_days = make_user_contribution_call(user)
-    if not contribution_days:
+    if not contribution_days and type(contribution_days) != int:
         return jsonify({
             "status": 400,
             "message": f"{user} not found."
