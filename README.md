@@ -2,7 +2,7 @@
 A small Flask application that interacts with github.
 
 ## Environment parameters
-* `GITHUB_API_KEY`: your GitHub access key. Neccessary for using github graphql api. you can get your key [here](https://github.com/settings/tokens).
+* `GITHUB_ACCESS_TOKEN`: your GitHub access token. Neccessary for using github graphql api. you can get your token [here](https://github.com/settings/tokens).
 
 ## Install & run
 Download
