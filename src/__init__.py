@@ -37,7 +37,7 @@ def is_user_active(user):
 @app.route("/downwards/<repo>", methods=["GET"])
 def is_repo_downgraded(repo):
     total_changes_last_week = get_total_changes_on_commits(repo)
-    if not total_changes_last_week:
+    if not total_changes_last_week and type(total_changes_last_week) != int:
         return jsonify({
             "status": 400,
             "message": f"{repo} is not unique or not found."

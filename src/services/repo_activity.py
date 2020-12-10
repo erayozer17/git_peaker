@@ -41,7 +41,7 @@ def get_repo_commits(repo):
 def get_total_changes_on_commits(repo):
     total = 0
     commits = get_repo_commits(repo)
-    if not commits:
+    if not commits and type(commits) != list:
         return False
     for commit in commits:
         total += commit["additions"]
