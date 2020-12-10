@@ -12,6 +12,7 @@ distro==1.4.0
 flake8==3.8.4
 Flask==1.1.2
 Flask-Testing==0.8.0
+freezegun==1.0.0
 html5lib==1.0.1
 idna==2.8
 iniconfig==1.1.1
@@ -32,6 +33,7 @@ pydocstyle==5.1.1
 pyflakes==2.2.0
 pyparsing==2.4.6
 pytest==6.1.2
+python-dateutil==2.8.1
 python-dotenv==0.15.0
 pytoml==0.1.21
 requests==2.22.0
