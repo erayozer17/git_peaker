@@ -14,3 +14,4 @@ class TestingConfig(BaseConfig):
     """Testing configuration."""
 
     TESTING = True
+    PRESERVE_CONTEXT_ON_EXCEPTION = False

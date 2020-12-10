@@ -13,11 +13,11 @@ app_settings = os.getenv("APP_SETTINGS")
 app.config.from_object(app_settings)
 
 
-@app.route("/ping", methods=["GET"])
+@app.route("/sanity", methods=["GET"])
 def ping_pong():
     return jsonify({
         "status": "success",
-        "message": "pong!"
+        "message": "check!"
     })
 
 
